@@ -1,48 +1,3 @@
-
-<details>
-<summary><b>6. What is the difference between a block device and a character device?</b></summary>
-
-<table>
-   <tr>
-      <th style="text-align:left">Aspect</th>
-      <th style="text-align:left">Block Device</th>
-      <th style="text-align:left">Character Device</th>
-   </tr>
-   <tr>
-      <td>Data Access</td>
-      <td>Transfers data in fixed-size blocks (e.g., 512 bytes, 4KB)</td>
-      <td>Transfers data as a stream of bytes (no block size)</td>
-   </tr>
-   <tr>
-      <td>Examples</td>
-      <td>Hard drives, SSDs, USB drives, loop devices</td>
-      <td>Keyboards, mice, serial ports, terminals</td>
-   </tr>
-   <tr>
-      <td>Buffering</td>
-      <td>Buffered by the kernel for random access</td>
-      <td>Unbuffered or line-buffered, sequential access</td>
-   </tr>
-   <tr>
-      <td>Device Files</td>
-      <td>Located in <code>/dev</code> as <code>sd*</code>, <code>loop*</code>, etc.</td>
-      <td>Located in <code>/dev</code> as <code>tty*</code>, <code>serial*</code>, etc.</td>
-   </tr>
-   <tr>
-      <td>Usage</td>
-      <td>Used for filesystems, random access storage</td>
-      <td>Used for direct device communication, streaming data</td>
-   </tr>
-</table>
-
-<br>
-<b>Summary:</b>
-<ul>
-   <li><b>Block devices</b> are for storage and filesystems, supporting random access in blocks.</li>
-   <li><b>Character devices</b> are for byte-stream devices, supporting sequential access.</li>
-</ul>
-
-</details>
 <div align="center">
    <h1>Virtual SD Card for Embedded Linux Development</h1>
 </div>
@@ -265,7 +220,50 @@ For permanent changes, add <code>dev.loop.max_loop=&lt;new_limit&gt;</code> to y
 
 </details>
 
+<details>
+<summary><b>6. What is the difference between a block device and a character device?</b></summary>
 
+<table>
+   <tr>
+      <th style="text-align:left">Aspect</th>
+      <th style="text-align:left">Block Device</th>
+      <th style="text-align:left">Character Device</th>
+   </tr>
+   <tr>
+      <td>Data Access</td>
+      <td>Transfers data in fixed-size blocks (e.g., 512 bytes, 4KB)</td>
+      <td>Transfers data as a stream of bytes (no block size)</td>
+   </tr>
+   <tr>
+      <td>Examples</td>
+      <td>Hard drives, SSDs, USB drives, loop devices</td>
+      <td>Keyboards, mice, serial ports, terminals</td>
+   </tr>
+   <tr>
+      <td>Buffering</td>
+      <td>Buffered by the kernel for random access</td>
+      <td>Unbuffered or line-buffered, sequential access</td>
+   </tr>
+   <tr>
+      <td>Device Files</td>
+      <td>Located in <code>/dev</code> as <code>sd*</code>, <code>loop*</code>, etc.</td>
+      <td>Located in <code>/dev</code> as <code>tty*</code>, <code>serial*</code>, etc.</td>
+   </tr>
+   <tr>
+      <td>Usage</td>
+      <td>Used for filesystems, random access storage</td>
+      <td>Used for direct device communication, streaming data</td>
+   </tr>
+</table>
+
+<br>
+<b>Summary:</b>
+<ul>
+   <li><b>Block devices</b> are for storage and filesystems, supporting random access in blocks.</li>
+   <li><b>Character devices</b> are for byte-stream devices, supporting sequential access.</li>
+</ul>
+
+</details>
 
 ---
 
