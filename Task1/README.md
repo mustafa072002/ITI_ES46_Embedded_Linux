@@ -12,7 +12,7 @@
        dd if=/dev/zero of=virtual_sd_card.img bs=1M count=1024
        ```
     <div align="center">
-       <img src="./images/sd_card_creation.png" alt="Virtual SD Card Creation Process" width="400"/>
+       <img src="./images/sd_card_creation.png" alt="Virtual SD Card Creation Process" width="600"/>
     </div>
 
 2. **Formatting and Partitioning**
@@ -25,7 +25,7 @@
        - Create a new partition for the Raspi bootloader (e.g., 200MB, primary, 6.FAT16, Bootable).
        - Create another partition for the root filesystem (e.g., 800MB, primary, 83 Linux Type ext4).
     <div align="center">
-       <img src="./images/sd_card_partitioning.png" alt="Virtual SD Card Partitioning" width="400"/>
+       <img src="./images/sd_card_partitioning.png" alt="Virtual SD Card Partitioning" width="600"/>
     </div>
 
 3. **Attach the Disk Image**
@@ -41,7 +41,7 @@
        lsblk
        ```
     <div align="center">
-       <img src="./images/sd_card_loop_device.png" alt="Virtual SD Card as Loop Device" width="400"/>
+       <img src="./images/sd_card_loop_device.png" alt="Virtual SD Card as Loop Device" width="600"/>
     </div>
 
 
@@ -56,7 +56,7 @@
        lsblk -f
        ```
     <div align="center">
-       <img src="./images/sd_card_formatted.png" alt="Partitions Formatted" width="400"/>
+       <img src="./images/sd_card_formatted.png" alt="Partitions Formatted" width="600"/>
     </div>
 
 5. **Mount the Partitions**
@@ -68,11 +68,11 @@
        sudo mount /dev/loop0p2 /mnt/rootfs
        ```
     <div align="center">
-       <img src="./images/mount_points.png" alt="Partitions Mounted" width="400"/>
+       <img src="./images/mount_points.png" alt="Partitions Mounted" width="600"/>
     </div>
 
 ---
 
 <div align="center">
-   <sub>Created by Embedded Linux Team &copy; 2026</sub>
+   <sub>Created by Mustafa Mahgoub &copy; 2026</sub>
 </div>
